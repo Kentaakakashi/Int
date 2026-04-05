@@ -4,7 +4,6 @@ import { StatsSection } from '@/components/StatsSection';
 import FavoritesSection from '@/components/FavoritesSection';
 import { AboutSection } from '@/components/AboutSection';
 import { SkillsSection } from '@/components/SkillsSection';
-import { FavoritesSection } from '@/components/FavoritesSection';
 import { FooterSection } from '@/components/FooterSection';
 import { ThemeSwitcher } from '@/components/ThemeSwitcher';
 
