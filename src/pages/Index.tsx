@@ -9,12 +9,13 @@ import { SkillsSection } from "@/components/SkillsSection";
 import { FooterSection } from "@/components/FooterSection";
 import { ThemeSwitcher } from "@/components/ThemeSwitcher";
 import BackgroundLayer from "@/components/BackgroundLayer";
+import BackgroundPicker from "@/components/BackgroundPicker";
 import { siteData } from "@/data/siteData";
 
 export default function Index() {
   const defaultPresetId = siteData.backgroundPresets?.[0]?.id ?? "default";
 
-  const [activePresetId, setActivePresetId] = useState<string>("jjk-opening");
+  const [activePresetId, setActivePresetId] = useState<string>(defaultPresetId);
 
   useEffect(() => {
     const savedPreset = localStorage.getItem("kenta_background_preset");
@@ -44,6 +45,10 @@ export default function Index() {
       </main>
 
       <ThemeSwitcher />
+      <BackgroundPicker
+        activePresetId={activePresetId}
+        onSelect={setActivePresetId}
+      />
     </div>
   );
 }
