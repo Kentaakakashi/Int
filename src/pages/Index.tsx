@@ -14,7 +14,7 @@ import { siteData } from "@/data/siteData";
 export default function Index() {
   const defaultPresetId = siteData.backgroundPresets?.[0]?.id ?? "default";
 
-  const [activePresetId, setActivePresetId] = useState<string>(defaultPresetId);
+  const [activePresetId, setActivePresetId] = useState<string>(jjk-opening);
 
   useEffect(() => {
     const savedPreset = localStorage.getItem("kenta_background_preset");
