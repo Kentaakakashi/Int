@@ -1,5 +1,6 @@
-import { motion } from 'motion/react';
-import { siteData } from '@/data/siteData';
+import { motion } from "motion/react";
+import Shuffle from "@/components/Shuffle";
+import { siteData } from "@/data/siteData";
 
 export function AboutSection() {
   const { about } = siteData;
@@ -14,7 +15,40 @@ export function AboutSection() {
           transition={{ duration: 0.6 }}
           className="lg:col-span-7 p-8 md:p-12 rounded-[2rem] bg-card-bg border border-card-border flex flex-col justify-center"
         >
-          <h2 className="text-2xl md:text-3xl font-bold tracking-tight mb-6 text-text-primary">About Me</h2>
+          <Shuffle
+            text="About Me"
+            tag="h2"
+            shuffleDirection="right"
+            duration={0.45}
+            animationMode="evenodd"
+            shuffleTimes={1}
+            ease="power3.out"
+            stagger={0.025}
+            threshold={0.15}
+            triggerOnce={true}
+            triggerOnHover={true}
+            respectReducedMotion={true}
+            loop={false}
+            className="text-2xl md:text-3xl font-bold tracking-tight mb-4 text-text-primary"
+          />
+
+          <Shuffle
+            text="Code, chaos, and trying to make both look clean."
+            tag="p"
+            shuffleDirection="right"
+            duration={0.35}
+            animationMode="evenodd"
+            shuffleTimes={1}
+            ease="power3.out"
+            stagger={0.018}
+            threshold={0.15}
+            triggerOnce={true}
+            triggerOnHover={false}
+            respectReducedMotion={true}
+            loop={false}
+            className="text-sm md:text-base text-text-secondary mb-6"
+          />
+
           <p className="text-lg md:text-xl text-text-secondary leading-relaxed font-medium">
             {about.text}
           </p>
