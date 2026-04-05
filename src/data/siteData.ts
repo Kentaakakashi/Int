@@ -96,7 +96,7 @@ export const siteData = {
       }
     ]
   }
-]
+],
 
   socials: [
     { label: "GitHub", url: "https://github.com", icon: "Github" },
