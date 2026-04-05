@@ -137,7 +137,7 @@ export const siteData = {
       },
       {
         title: "Where The Winds Meet",
-        image: "/favorites/games/wtmm.jpg"
+        image: "/favorites/games/wtwm.jpg"
       },
       {
         title: "Gta: V",
