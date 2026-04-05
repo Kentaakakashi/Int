@@ -7,7 +7,9 @@ import { AboutSection } from '@/components/AboutSection';
 import { SkillsSection } from '@/components/SkillsSection';
 import { FooterSection } from '@/components/FooterSection';
 import { ThemeSwitcher } from '@/components/ThemeSwitcher';
-
+import { useEffect, useState } from "react";
+import BackgroundLayer from "@/components/BackgroundLayer";
+import { siteData } from "@/data/siteData";
 export default function Index() {
   return (
     <div className="min-h-screen selection:bg-accent-color selection:text-bg-color font-sans">
