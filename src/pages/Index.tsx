@@ -2,6 +2,7 @@ import { IntroOverlay } from '@/components/IntroOverlay';
 import { HeroSection } from '@/components/HeroSection';
 import { StatsSection } from '@/components/StatsSection';
 import FavoritesSection from '@/components/FavoritesSection';
+import { FeaturedSection } from '@/components/FeaturedSection';
 import { AboutSection } from '@/components/AboutSection';
 import { SkillsSection } from '@/components/SkillsSection';
 import { FooterSection } from '@/components/FooterSection';
