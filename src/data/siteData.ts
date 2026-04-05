@@ -59,7 +59,24 @@ export const siteData = {
       {
         title: "Attack On Titans",
         image: "/favorites/anime/AOT.jpg"
+      },
+      {
+        title: "One Piece",
+        image: "/favorites/anime/op.jpg"
+      },
+      {
+        title: "Demon slayer",
+        image: "/favorites/anime/ds.jpg"
+      },
+      {
+        title: "Death Note",
+        image: "/favorites/anime/dn.jpg"
+      },
+      {
+        title: "Solo leveling",
+        image: "/favorites/anime/sl.jpg"
       }
+      
     ]
   },
   {
