@@ -279,3 +279,35 @@ export const siteData = {
     { label: "YouTube", url: "https://youtube.com", icon: "Youtube" },
   ],
 };
+backgroundPresets: [
+  {
+    id: "default",
+    title: "Default",
+    type: "regular",
+    description: "Clean static background"
+  },
+  {
+    id: "jjk-opening",
+    title: "JJK Opening",
+    type: "video",
+    videoSrc: "/backgrounds/jjk.mp4",
+    thumbnail: "/thumbnails/jjk.jpg",
+    description: "Jujutsu Kaisen opening energy"
+  },
+  {
+    id: "edgerunners",
+    title: "Edgerunners",
+    type: "video",
+    videoSrc: "/backgrounds/edgerunners.mp4",
+    thumbnail: "/thumbnails/edgerunners.jpg",
+    description: "Cyberpunk sadness with style"
+  },
+  {
+    id: "aot-rumble",
+    title: "AOT Rumble",
+    type: "video",
+    videoSrc: "/backgrounds/aot.mp4",
+    thumbnail: "/thumbnails/aot.jpg",
+    description: "World-ending energy"
+  }
+]
