@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState } from "react";
+      import { useEffect, useMemo, useRef, useState } from "react";
 import { siteData } from "@/data/siteData";
 
 type BackgroundPreset = {
@@ -17,11 +17,13 @@ type BackgroundLayerProps = {
 export default function BackgroundLayer({
   activePresetId,
 }: BackgroundLayerProps) {
-  const presets = siteData.backgroundPresets as BackgroundPreset[];
+  const rawPresets = siteData.backgroundPresets;
+  const presets: BackgroundPreset[] = Array.isArray(rawPresets) ? rawPresets : [];
   const videoRef = useRef<HTMLVideoElement | null>(null);
   const [videoError, setVideoError] = useState(false);
 
   const activePreset = useMemo(() => {
+    if (!presets.length) return null;
     return (
       presets.find((preset) => preset.id === activePresetId) ??
       presets.find((preset) => preset.id === "default") ??
@@ -42,14 +44,19 @@ export default function BackgroundLayer({
         video.currentTime = 0;
         await video.play();
       } catch {
-        // browser may block autoplay-with-sound until user interaction
+        // autoplay with sound may be blocked until user interaction
       }
     };
 
     tryPlay();
   }, [activePreset]);
 
-  if (!activePreset || activePreset.type === "regular" || videoError) {
+  if (
+    !activePreset ||
+    activePreset.type === "regular" ||
+    !activePreset.videoSrc ||
+    videoError
+  ) {
     return (
       <div className="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
         <div className="absolute inset-0 bg-zinc-950" />
