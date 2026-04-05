@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg-color: var(--bg-color);
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-accent-color: var(--accent-color);
+  --color-accent-hover: var(--accent-hover);
+  --color-card-bg: var(--card-bg);
+  --color-card-border: var(--card-border);
+}
+
+@layer base {
+  :root {
+    /* Minimal Dark (Default) */
+    --bg-color: #09090b;
+    --text-primary: #fafafa;
+    --text-secondary: #a1a1aa;
+    --accent-color: #ffffff;
+    --accent-hover: #e4e4e7;
+    --card-bg: #18181b;
+    --card-border: #27272a;
+  }
+
+  .theme-red-cyber {
+    --bg-color: #000000;
+    --text-primary: #ff003c;
+    --text-secondary: #8c0021;
+    --accent-color: #ff003c;
+    --accent-hover: #ff3366;
+    --card-bg: #0a0002;
+    --card-border: #33000c;
+  }
+
+  .theme-neon-blue {
+    --bg-color: #020617;
+    --text-primary: #38bdf8;
+    --text-secondary: #0ea5e9;
+    --accent-color: #0284c7;
+    --accent-hover: #38bdf8;
+    --card-bg: #0f172a;
+    --card-border: #1e293b;
+  }
+
+  .theme-soft-anime {
+    --bg-color: #fdf2f8;
+    --text-primary: #831843;
+    --text-secondary: #be185d;
+    --accent-color: #f472b6;
+    --accent-hover: #f9a8d4;
+    --card-bg: #fce7f3;
+    --card-border: #fbcfe8;
+  }
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+::selection {
+  background-color: var(--accent-color);
+  color: var(--bg-color);
+}
