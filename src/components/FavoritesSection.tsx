@@ -1,7 +1,8 @@
                   import SectionHeading from "@/components/SectionHeading";
 import ScrollStack, { ScrollStackItem } from "@/components/ScrollStack";
 import { siteData } from "@/data/siteData";
-import { useTheme } from "@/hooks/useTheme";
+import { useContext } from "react";
+import { ThemeContext } from "@/App";
 
 function FavoriteCard({
   title,
@@ -45,7 +46,7 @@ function FavoriteCard({
 }
 
 export default function FavoritesSection() {
-  const { theme } = useTheme();
+  const { theme } = useContext(ThemeContext);
 
   return (
     <section id="favorites" className="py-20 md:py-24 scroll-mt-24">
