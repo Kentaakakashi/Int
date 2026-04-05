@@ -53,8 +53,12 @@ export const siteData = {
         image: "/favorites/anime/edgerunners.jpg"
       },
       {
-        title: "Serial Experiments Lain",
-        image: "/favorites/anime/lain.jpg"
+        title: "Naruto: Shippuden",
+        image: "/favorites/anime/naruto.jpg"
+      },
+      {
+        title: "Attack On Titans",
+        image: "/favorites/anime/AOT.jpg"
       }
     ]
   },
@@ -74,6 +78,14 @@ export const siteData = {
       {
         title: "Crystal Castles",
         image: "/favorites/music/crystal-castles.jpg"
+      },
+      {
+        title: "Joji",
+        image: "/favorites/music/joji.jpg"
+      },
+      {
+        title: "Joji",
+        image: "/favorites/music/joji.jpg"
       }
     ]
   },
@@ -83,8 +95,28 @@ export const siteData = {
     introText: "The games I keep crawling back to.",
     items: [
       {
-        title: "NieR: Automata",
-        image: "/favorites/games/nier.jpg"
+        title: "Red Dead Redemption",
+        image: "/favorites/games/RDR.jpg"
+      },
+      {
+        title: "Red Dead Redemption 2",
+        image: "/favorites/games/RDR2.jpg"
+      },
+      {
+        title: "GTA: San Andreas",
+        image: "/favorites/games/gtasan.jpg"
+      },
+      {
+        title: "Gta: Vice City",
+        image: "/favorites/games/gtavc.jpg"
+      },
+      {
+        title: "Where The Winds Meet",
+        image: "/favorites/games/wtmm.jpg"
+      },
+      {
+        title: "Gta: V",
+        image: "/favorites/games/gtav.jpg"
       },
       {
         title: "Hollow Knight",
@@ -93,6 +125,14 @@ export const siteData = {
       {
         title: "Elden Ring",
         image: "/favorites/games/elden-ring.jpg"
+      },
+      {
+        title: "Roblox",
+        image: "/favorites/games/roblox.jpg"
+      },
+      {
+        title: "etc",
+        image: "/favorites/games/etc.jpg"
       }
     ]
   }
