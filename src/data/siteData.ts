@@ -38,11 +38,65 @@ export const siteData = {
     { title: "Fucking up my own day", subtitle: "Without even trying", description: "A natural talent.", icon: "AlertTriangle" }
   ],
 
-  favorites: {
-    music: ["Synthwave", "J-Pop", "Lo-Fi Beats", "Phonk"],
-    anime: ["Cyberpunk: Edgerunners", "Evangelion", "Jujutsu Kaisen", "Steins;Gate"],
-    games: ["Elden Ring", "Valorant", "Osu!", "NieR:Automata"]
+  favorites: [
+  {
+    category: "Anime",
+    introTitle: "Favorite Anime",
+    introText: "Stories, fights, aura, and emotional damage.",
+    items: [
+      {
+        title: "Jujutsu Kaisen",
+        image: "/favorites/anime/jjk.jpg"
+      },
+      {
+        title: "Cyberpunk: Edgerunners",
+        image: "/favorites/anime/edgerunners.jpg"
+      },
+      {
+        title: "Serial Experiments Lain",
+        image: "/favorites/anime/lain.jpg"
+      }
+    ]
   },
+  {
+    category: "Music",
+    introTitle: "Favorite Music",
+    introText: "Stuff that permanently rewired my brain.",
+    items: [
+      {
+        title: "Deftones",
+        image: "/favorites/music/deftones.jpg"
+      },
+      {
+        title: "Joji",
+        image: "/favorites/music/joji.jpg"
+      },
+      {
+        title: "Crystal Castles",
+        image: "/favorites/music/crystal-castles.jpg"
+      }
+    ]
+  },
+  {
+    category: "Games",
+    introTitle: "Favorite Games",
+    introText: "The games I keep crawling back to.",
+    items: [
+      {
+        title: "NieR: Automata",
+        image: "/favorites/games/nier.jpg"
+      },
+      {
+        title: "Hollow Knight",
+        image: "/favorites/games/hollow-knight.jpg"
+      },
+      {
+        title: "Elden Ring",
+        image: "/favorites/games/elden-ring.jpg"
+      }
+    ]
+  }
+]
 
   socials: [
     { label: "GitHub", url: "https://github.com", icon: "Github" },
