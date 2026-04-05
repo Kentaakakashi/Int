@@ -155,34 +155,13 @@ export const siteData = {
       introTitle: "Favorite Music",
       introText: "Stuff that permanently rewired my brain.",
       items: [
-        {
-          title: "Golden Hour",
-          image: "/favorites/music/deftones.jpg",
-        },
-        {
-          title: "Timeless",
-          image: "/favorites/music/joji.jpg",
-        },
-        {
-          title: "After Hours",
-          image: "/favorites/music/crystal-castles.jpg",
-        },
-        {
-          title: "Blinding Lights",
-          image: "/favorites/music/joji.jpg",
-        },
-        {
-          title: "That's What I Like",
-          image: "/favorites/music/joji.jpg",
-        },
-        {
-          title: "The Night We Met",
-          image: "/favorites/music/joji.jpg",
-        },
-        {
-          title: "Babydoll",
-          image: "/favorites/music/joji.jpg",
-        },
+        { title: "Golden Hour", image: "/favorites/music/deftones.jpg" },
+        { title: "Timeless", image: "/favorites/music/joji.jpg" },
+        { title: "After Hours", image: "/favorites/music/crystal-castles.jpg" },
+        { title: "Blinding Lights", image: "/favorites/music/joji.jpg" },
+        { title: "That's What I Like", image: "/favorites/music/joji.jpg" },
+        { title: "The Night We Met", image: "/favorites/music/joji.jpg" },
+        { title: "Babydoll", image: "/favorites/music/joji.jpg" },
       ],
     },
     {
@@ -278,36 +257,37 @@ export const siteData = {
     { label: "Spotify", url: "https://spotify.com", icon: "Music" },
     { label: "YouTube", url: "https://youtube.com", icon: "Youtube" },
   ],
+
+  backgroundPresets: [
+    {
+      id: "default",
+      title: "Default",
+      type: "regular",
+      description: "Clean static background",
+    },
+    {
+      id: "jjk-opening",
+      title: "JJK Opening",
+      type: "video",
+      videoSrc: "/backgrounds/jjk.mp4",
+      thumbnail: "/thumbnails/jjk.jpg",
+      description: "Jujutsu Kaisen opening energy",
+    },
+    {
+      id: "edgerunners",
+      title: "Edgerunners",
+      type: "video",
+      videoSrc: "/backgrounds/edgerunners.mp4",
+      thumbnail: "/thumbnails/edgerunners.jpg",
+      description: "Cyberpunk sadness with style",
+    },
+    {
+      id: "aot-rumble",
+      title: "AOT Rumble",
+      type: "video",
+      videoSrc: "/backgrounds/aot.mp4",
+      thumbnail: "/thumbnails/aot.jpg",
+      description: "World-ending energy",
+    },
+  ],
 };
-backgroundPresets: [
-  {
-    id: "default",
-    title: "Default",
-    type: "regular",
-    description: "Clean static background"
-  },
-  {
-    id: "jjk-opening",
-    title: "JJK Opening",
-    type: "video",
-    videoSrc: "/backgrounds/jjk.mp4",
-    thumbnail: "/thumbnails/jjk.jpg",
-    description: "Jujutsu Kaisen opening energy"
-  },
-  {
-    id: "edgerunners",
-    title: "Edgerunners",
-    type: "video",
-    videoSrc: "/backgrounds/edgerunners.mp4",
-    thumbnail: "/thumbnails/edgerunners.jpg",
-    description: "Cyberpunk sadness with style"
-  },
-  {
-    id: "aot-rumble",
-    title: "AOT Rumble",
-    type: "video",
-    videoSrc: "/backgrounds/aot.mp4",
-    thumbnail: "/thumbnails/aot.jpg",
-    description: "World-ending energy"
-  }
-]
