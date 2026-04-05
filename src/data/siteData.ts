@@ -85,23 +85,31 @@ export const siteData = {
     introText: "Stuff that permanently rewired my brain.",
     items: [
       {
-        title: "Deftones",
+        title: "Golden Hour",
         image: "/favorites/music/deftones.jpg"
       },
       {
-        title: "Joji",
+        title: "Timeless",
         image: "/favorites/music/joji.jpg"
       },
       {
-        title: "Crystal Castles",
+        title: "After hour's",
         image: "/favorites/music/crystal-castles.jpg"
       },
       {
-        title: "Joji",
+        title: "Blinding lights",
         image: "/favorites/music/joji.jpg"
       },
       {
-        title: "Joji",
+        title: "Thats what i like",
+        image: "/favorites/music/joji.jpg"
+      },
+      {
+        title: "The night we met",
+        image: "/favorites/music/joji.jpg"
+      },
+      {
+        title: "Babydoll",
         image: "/favorites/music/joji.jpg"
       }
     ]
@@ -134,6 +142,10 @@ export const siteData = {
       {
         title: "Gta: V",
         image: "/favorites/games/gtav.jpg"
+      },
+      {
+        title: "Cyberpunk: 2077",
+        image: "/favorites/games/cp.jpg"
       },
       {
         title: "Hollow Knight",
