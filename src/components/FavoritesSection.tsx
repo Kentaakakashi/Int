@@ -1,8 +1,6 @@
-                  import SectionHeading from "@/components/SectionHeading";
+import SectionHeading from "@/components/SectionHeading";
 import ScrollStack, { ScrollStackItem } from "@/components/ScrollStack";
 import { siteData } from "@/data/siteData";
-import { useContext } from "react";
-import { ThemeContext } from "@/App";
 
 function FavoriteCard({
   title,
@@ -46,8 +44,6 @@ function FavoriteCard({
 }
 
 export default function FavoritesSection() {
-  const { theme } = useContext(ThemeContext);
-
   return (
     <section id="favorites" className="py-20 md:py-24 scroll-mt-24">
       <SectionHeading
@@ -60,16 +56,16 @@ export default function FavoritesSection() {
         {siteData.favorites.map((group) => (
           <div key={group.category}>
             <div className="mb-8">
-              <p className={`text-sm font-medium ${theme.accent}`}>{group.category}</p>
-              <h3 className={`mt-2 text-2xl md:text-3xl font-bold ${theme.heading}`}>
+              <p className="text-sm font-medium text-white/70">{group.category}</p>
+              <h3 className="mt-2 text-2xl md:text-3xl font-bold text-white">
                 {group.introTitle}
               </h3>
-              <p className={`mt-3 max-w-2xl ${theme.text} opacity-80`}>
+              <p className="mt-3 max-w-2xl text-white/70">
                 {group.introText}
               </p>
             </div>
 
-            <div className={`rounded-[32px] border ${theme.border} ${theme.cardBg} overflow-hidden`}>
+            <div className="overflow-hidden rounded-[32px] border border-white/10 bg-white/[0.03]">
               <div className="h-[70vh] min-h-[540px]">
                 <ScrollStack
                   itemDistance={80}
