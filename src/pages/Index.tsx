@@ -14,7 +14,6 @@ import { siteData } from "@/data/siteData";
 
 export default function Index() {
   const defaultPresetId = siteData.backgroundPresets?.[0]?.id ?? "default";
-
   const [activePresetId, setActivePresetId] = useState<string>(defaultPresetId);
 
   useEffect(() => {
@@ -34,14 +33,20 @@ export default function Index() {
 
       <IntroOverlay />
 
-      <main className="relative z-10 mx-auto max-w-7xl px-6 md:px-12 lg:px-24">
-        <HeroSection />
-        <StatsSection />
-        <FeaturedSection />
-        <AboutSection />
-        <SkillsSection />
+      <main className="relative z-10">
+        <div className="mx-auto max-w-7xl px-6 md:px-12 lg:px-24">
+          <HeroSection />
+          <StatsSection />
+          <FeaturedSection />
+          <AboutSection />
+          <SkillsSection />
+        </div>
+
         <FavoritesSection />
-        <FooterSection />
+
+        <div className="mx-auto max-w-7xl px-6 md:px-12 lg:px-24">
+          <FooterSection />
+        </div>
       </main>
 
       <ThemeSwitcher />
