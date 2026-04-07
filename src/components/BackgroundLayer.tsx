@@ -1,4 +1,4 @@
-      import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { siteData } from "@/data/siteData";
 
 type BackgroundPreset = {
