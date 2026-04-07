@@ -26,7 +26,7 @@ export const siteData = {
   },
 
   about: {
-    text: "I'm a developer who loves blending design with engineering. When I'm not writing code, I'm probably watching anime, editing videos, or trying to figure out why my latest script crashed.",
+    text: "I'm a just a goofy dumbahh who yap's a lot and gives shit load of life advice (which even i dont follow). My special skills are that i learn stuffs that aren't even necessary for my academic stability like WHO TF MASTERS SQL AT 9TH STANDAR- Sighhhh 😮‍💨. I make websites when am bored... just like this one, i have like shit load of ideas to build new stuff's but my resource and attention span is my biggest limit 🙂‍↕️. If i say something fumb while we're talking... laugh fr, cuz belive it or not theres a 90% chance its a joke that i said. thats how dead my hunor has gotten 💔✌️(welp). I also hate replying to random people and DM, not because am a celebrity or non-chalant final boss BUT AM LAZY AF (Trust. am chill). so don't jump into my DM if you're a stranger 🎀.",
     interests: [
       "Cyberpunk Aesthetics",
       "Mechanical Keyboards",
