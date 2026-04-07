@@ -1,6 +1,6 @@
 export const siteData = {
   name: "Kenta",
-  username: "kenta.exe",
+  username: "Kenta Kakashi",
   tagline: "Building digital experiences & breaking things.",
   statusLine: "Currently: Exploring the void.",
   profileImage:
