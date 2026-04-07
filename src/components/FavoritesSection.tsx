@@ -287,8 +287,7 @@ export default function FavoritesSection() {
               </div>
 
               <div className="relative">
-  <div className="h-[70vh] min-h-[540px]">
-    <ScrollStack
+                <div className="h-[70vh] min-h-[540px]">
                   <ScrollStack
                     itemDistance={80}
                     itemScale={0.02}
