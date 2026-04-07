@@ -286,8 +286,9 @@ export default function FavoritesSection() {
                 <p className="mt-3 max-w-2xl text-white/70">{group.introText}</p>
               </div>
 
-              <div className="overflow-hidden rounded-[32px] border border-white/10 bg-white/[0.03]">
-                <div className="h-[70vh] min-h-[540px]">
+              <div className="relative">
+  <div className="h-[70vh] min-h-[540px]">
+    <ScrollStack
                   <ScrollStack
                     itemDistance={80}
                     itemScale={0.02}
