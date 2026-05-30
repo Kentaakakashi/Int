@@ -1,64 +1,126 @@
-import { motion } from 'motion/react';
-import { ArrowUpRight } from 'lucide-react';
-import { siteData } from '@/data/siteData';
+import { motion } from "motion/react";
+import { siteData } from "@/data/siteData";
 
 export function FeaturedSection() {
-  const { featuredProject } = siteData;
+  const project = siteData.featuredProject;
 
   return (
-    <section className="py-16">
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.6 }}
-      >
-        <div className="flex items-center justify-between mb-8">
-          <h2 className="text-2xl md:text-3xl font-bold tracking-tight text-text-primary">Featured Project</h2>
-          <span className="text-xs font-mono px-4 py-1.5 rounded-full bg-card-bg border border-card-border text-text-secondary uppercase tracking-widest">
-            {featuredProject.status}
-          </span>
-        </div>
+    <section
+      id="projects"
+      className="py-32 md:py-48 border-t border-zinc-900"
+    >
+      <div className="mb-16">
+        <p className="uppercase tracking-[0.4em] text-zinc-500 text-sm mb-4">
+          Featured Work
+        </p>
 
-        <div className="group relative rounded-[2rem] overflow-hidden bg-card-bg border border-card-border shadow-2xl">
-          <div className="aspect-[4/3] md:aspect-[21/9] w-full overflow-hidden">
-            <img 
-              src={featuredProject.image} 
-              alt={featuredProject.title}
-              className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105 opacity-90 group-hover:opacity-100"
-              referrerPolicy="no-referrer"
-            />
-          </div>
-          
-          <div className="absolute inset-0 bg-gradient-to-t from-bg-color via-bg-color/60 to-transparent opacity-90" />
-          
-          <div className="absolute bottom-0 left-0 right-0 p-8 md:p-12 flex flex-col md:flex-row md:items-end justify-between gap-8">
-            <div className="max-w-3xl">
-              <h3 className="text-4xl md:text-6xl font-bold mb-4 tracking-tight text-text-primary">
-                {featuredProject.title}
-              </h3>
-              <p className="text-text-secondary md:text-xl mb-8 leading-relaxed max-w-2xl">
-                {featuredProject.description}
-              </p>
-              <div className="flex flex-wrap gap-3">
-                {featuredProject.technologies.map(tech => (
-                  <span key={tech} className="text-xs font-mono px-4 py-1.5 rounded-full bg-card-border/50 text-text-primary border border-card-border/50 backdrop-blur-sm">
-                    {tech}
-                  </span>
-                ))}
-              </div>
+        <h2 className="text-5xl md:text-7xl font-black tracking-tight">
+          Selected Project
+        </h2>
+      </div>
+
+      <motion.div
+        whileHover={{
+          y: -6,
+        }}
+        transition={{
+          duration: 0.25,
+        }}
+        className="
+          bg-zinc-950
+          border
+          border-zinc-800
+          rounded-[32px]
+          overflow-hidden
+        "
+      >
+        <div className="grid lg:grid-cols-2">
+          <div className="p-8 md:p-14 flex flex-col justify-center">
+            <div className="mb-4">
+              <span className="text-zinc-500 uppercase tracking-widest text-xs">
+                {project.status}
+              </span>
             </div>
-            
-            {featuredProject.link && (
-              <a 
-                href={featuredProject.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-text-primary text-bg-color hover:scale-110 transition-transform shrink-0 shadow-xl"
-              >
-                <ArrowUpRight className="w-8 h-8" />
-              </a>
+
+            <h3 className="text-4xl md:text-6xl font-black leading-tight">
+              {project.title}
+            </h3>
+
+            <p className="mt-6 text-zinc-400 text-lg leading-relaxed max-w-xl">
+              {project.description}
+            </p>
+
+            <div className="flex flex-wrap gap-3 mt-8">
+              {project.technologies.map((tech) => (
+                <span
+                  key={tech}
+                  className="
+                    px-4
+                    py-2
+                    rounded-full
+                    border
+                    border-zinc-700
+                    text-sm
+                    text-zinc-300
+                  "
+                >
+                  {tech}
+                </span>
+              ))}
+            </div>
+
+            {project.link && (
+              <div className="mt-10">
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="
+                    inline-flex
+                    items-center
+                    px-8
+                    py-4
+                    rounded-full
+                    bg-white
+                    text-black
+                    font-semibold
+                    hover:scale-105
+                    transition
+                  "
+                >
+                  View Project
+                </a>
+              </div>
             )}
+          </div>
+
+          <div
+            className="
+              min-h-[350px]
+              lg:min-h-full
+              bg-gradient-to-br
+              from-zinc-900
+              via-zinc-950
+              to-black
+              flex
+              items-center
+              justify-center
+            "
+          >
+            <div
+              className="
+                text-center
+                px-8
+              "
+            >
+              <h4 className="text-3xl font-black mb-4">
+                {project.title}
+              </h4>
+
+              <p className="text-zinc-500">
+                Project Preview Area
+              </p>
+            </div>
           </div>
         </div>
       </motion.div>
