@@ -6,6 +6,7 @@ import { FeaturedSection } from "@/components/FeaturedSection";
 import { AboutSection } from "@/components/AboutSection";
 import { SkillsSection } from "@/components/SkillsSection";
 import { FooterSection } from "@/components/FooterSection";
+import { Navbar } from "@/components/Navbar";
 
 export default function Index() {
   return (
