@@ -1,124 +1,119 @@
-import { useEffect, useState } from "react";
 import { motion } from "motion/react";
 import { siteData } from "@/data/siteData";
-import DecryptedText from "@/components/DecryptedText";
-
-function ShuffleText({ text }: { text: string }) {
-  const [display, setDisplay] = useState(text);
-  const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
-
-  useEffect(() => {
-    let iteration = 0;
-
-    const interval = setInterval(() => {
-      setDisplay(() =>
-        text
-          .split("")
-          .map((char, i) => {
-            if (char === " ") return " ";
-            if (i < iteration) return text[i];
-            return chars[Math.floor(Math.random() * chars.length)];
-          })
-          .join("")
-      );
-
-      iteration += 0.5;
-
-      if (iteration >= text.length) {
-        clearInterval(interval);
-        setDisplay(text);
-      }
-    }, 40);
-
-    return () => clearInterval(interval);
-  }, [text]);
-
-  return <span>{display}</span>;
-}
 
 export function AboutSection() {
   const { about } = siteData;
 
   return (
-    <section className="py-16">
-      <div className="grid grid-cols-1 gap-6 lg:grid-cols-12">
+    <section
+      id="about"
+      className="py-32 md:py-48 border-t border-zinc-900"
+    >
+      <div className="max-w-6xl">
+        <p className="uppercase tracking-[0.4em] text-zinc-500 text-sm mb-4">
+          About
+        </p>
+
+        <h2 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tight leading-[0.95] mb-12">
+          Building cool stuff,
+          <br />
+          learning constantly,
+          <br />
+          and surviving somehow.
+        </h2>
+      </div>
+
+      <div className="grid lg:grid-cols-12 gap-10 mt-20">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="lg:col-span-7 flex flex-col justify-center rounded-[2rem] border border-card-border bg-card-bg p-8 md:p-12"
+          transition={{ duration: 0.7 }}
+          className="lg:col-span-7"
         >
-          <h2 className="mb-6 text-2xl font-bold tracking-tight text-text-primary md:text-3xl">
-            <ShuffleText text="About Me" />
-          </h2>
-
-          <p className="mb-4 text-xs uppercase tracking-widest text-text-secondary/60">
-            Click to decrypt
+          <p className="text-xl md:text-2xl text-zinc-400 leading-relaxed">
+            {about.text}
           </p>
-
-          <DecryptedText
-            text={about.text}
-            animateOn="click"
-            clickMode="once"
-            speed={18}
-            maxIterations={18}
-            sequential={true}
-            revealDirection="start"
-            useOriginalCharsOnly={true}
-            className="text-lg font-medium leading-relaxed text-text-secondary md:text-xl"
-            encryptedClassName="cursor-pointer text-lg font-medium leading-relaxed text-text-secondary/30 md:text-xl"
-            parentClassName="block cursor-pointer"
-          />
         </motion.div>
 
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:col-span-5 lg:grid-cols-1">
+        <div className="lg:col-span-5 space-y-6">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="rounded-[2rem] border border-card-border bg-card-bg p-8"
+            transition={{ duration: 0.7, delay: 0.1 }}
+            className="
+              bg-zinc-950
+              border
+              border-zinc-800
+              rounded-[32px]
+              p-8
+            "
           >
-            <h3 className="mb-6 text-xs font-mono uppercase tracking-widest text-text-secondary">
+            <h3 className="text-xs uppercase tracking-[0.3em] text-zinc-500 mb-6">
               Currently Into
             </h3>
 
-            <ul className="space-y-4">
+            <div className="flex flex-wrap gap-3">
               {about.interests.map((item, i) => (
-                <li
+                <span
                   key={i}
-                  className="flex items-center gap-4 font-medium text-text-primary"
+                  className="
+                    px-4
+                    py-2
+                    rounded-full
+                    border
+                    border-zinc-700
+                    text-zinc-300
+                    text-sm
+                  "
                 >
-                  <span className="h-1.5 w-1.5 rounded-full bg-accent-color" />
                   {item}
-                </li>
+                </span>
               ))}
-            </ul>
+            </div>
           </motion.div>
 
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="rounded-[2rem] border border-card-border bg-card-bg p-8"
+            transition={{ duration: 0.7, delay: 0.2 }}
+            className="
+              bg-zinc-950
+              border
+              border-zinc-800
+              rounded-[32px]
+              p-8
+            "
           >
-            <h3 className="mb-6 text-xs font-mono uppercase tracking-widest text-text-secondary">
+            <h3 className="text-xs uppercase tracking-[0.3em] text-zinc-500 mb-6">
               Things Built
             </h3>
 
-            <ul className="space-y-4">
+            <div className="space-y-4">
               {about.built.map((item, i) => (
-                <li
+                <div
                   key={i}
-                  className="flex items-center gap-4 font-medium text-text-primary"
+                  className="
+                    flex
+                    items-center
+                    justify-between
+                    border-b
+                    border-zinc-800
+                    pb-3
+                  "
                 >
-                  <span className="h-1.5 w-1.5 rounded-full bg-accent-color" />
-                  {item}
-                </li>
+                  <span className="text-zinc-300">
+                    {item}
+                  </span>
+
+                  <span className="text-zinc-600">
+                    →
+                  </span>
+                </div>
               ))}
-            </ul>
+            </div>
           </motion.div>
         </div>
       </div>
