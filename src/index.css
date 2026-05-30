@@ -38,3 +38,32 @@ section {
   opacity: 0.15;
   pointer-events: none;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #000;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(255,255,255,0.03),
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at bottom right,
+      rgba(255,255,255,0.03),
+      transparent 40%
+    );
+
+  pointer-events: none;
+  z-index: -1;
+}
