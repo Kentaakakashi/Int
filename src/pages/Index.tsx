@@ -12,6 +12,7 @@ export default function Index() {
   return (
     <div className="min-h-screen bg-black text-white overflow-x-hidden">
       <IntroOverlay />
+      <Navbar />
 
       <main className="relative z-10">
         <div className="mx-auto max-w-7xl px-6 md:px-12 lg:px-20">
